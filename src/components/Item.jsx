@@ -46,7 +46,7 @@ const Item = ({
       toggleSubMenu={toggleSubMenu}
       activateMe={activateMe}
     >
-      <i className={classnames(classStore.classIcon, classStore.iconNamePrefix + icon)} />
+      {icon && <i className={classnames(classStore.classIcon, classStore.iconNamePrefix + icon)} />}
       {label}
       {hasSubMenu && <i
         className={classnames(
