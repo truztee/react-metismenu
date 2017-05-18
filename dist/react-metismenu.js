@@ -4030,7 +4030,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        activateMe: activateMe
 	      },
 	      icon && _react2.default.createElement('i', { className: (0, _classnames2.default)(classStore.classIcon, classStore.iconNamePrefix + icon) }),
-	      label,
+	      _react2.default.createElement(
+	        'span',
+	        { className: (0, _classnames2.default)(classStore.classLinkLabel) },
+	        label
+	      ),
 	      hasSubMenu && _react2.default.createElement('i', {
 	        className: (0, _classnames2.default)(classStore.classStateIcon, classStore.iconNamePrefix + (subMenuVisibility ? classStore.iconNameStateVisible : classStore.iconNameStateHidden))
 	      })

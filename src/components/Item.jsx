@@ -47,7 +47,7 @@ const Item = ({
       activateMe={activateMe}
     >
       {icon && <i className={classnames(classStore.classIcon, classStore.iconNamePrefix + icon)} />}
-      {label}
+      <span className={classnames(classStore.classLinkLabel)}>{label}</span>
       {hasSubMenu && <i
         className={classnames(
           classStore.classStateIcon,
