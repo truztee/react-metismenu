@@ -4035,9 +4035,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        { className: (0, _classnames2.default)(classStore.classLinkLabel) },
 	        label
 	      ),
-	      hasSubMenu && _react2.default.createElement('i', {
-	        className: (0, _classnames2.default)(classStore.classStateIcon, classStore.iconNamePrefix + (subMenuVisibility ? classStore.iconNameStateVisible : classStore.iconNameStateHidden))
-	      })
+	      hasSubMenu && _react2.default.createElement(
+	        'span',
+	        null,
+	        _react2.default.createElement('i', { className: (0, _classnames2.default)(classStore.classStateIcon, classStore.iconNamePrefix + (subMenuVisibility ? classStore.iconNameStateVisible : classStore.iconNameStateHidden))
+	        })
+	      )
 	    ),
 	    hasSubMenu && _react2.default.createElement(_Container2.default, {
 	      itemId: id,

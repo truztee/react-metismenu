@@ -48,16 +48,19 @@ const Item = ({
     >
       {icon && <i className={classnames(classStore.classIcon, classStore.iconNamePrefix + icon)} />}
       <span className={classnames(classStore.classLinkLabel)}>{label}</span>
-      {hasSubMenu && <i
-        className={classnames(
-          classStore.classStateIcon,
-          classStore.iconNamePrefix + (
-            subMenuVisibility
-              ? classStore.iconNameStateVisible
-              : classStore.iconNameStateHidden
-          )
-        )}
-      />}
+      {hasSubMenu && (
+        <span>
+          <i className={classnames(
+            classStore.classStateIcon,
+            classStore.iconNamePrefix + (
+              subMenuVisibility
+                ? classStore.iconNameStateVisible
+                : classStore.iconNameStateHidden
+            )
+          )}
+          />
+        </span>
+      )}
     </LinkComponent>
     {hasSubMenu && <Container
       itemId={id}
