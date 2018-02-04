@@ -6,22 +6,22 @@
   "scripts": {
     "dev-server": "webpack-dev-server --config webpack/dev.conf.js --progress --colors --hot --inline",
     "start": "npm run dev-server",
-    "build-demo": "rm -rf demo && mkdir demo && cp dev/{index.html,style.css} demo && webpack --config webpack/demo.conf.js --progress --colors",
+    "build-demo": "rm -rf demo & mkdir demo & cp dev/{index.html,style.css} demo & webpack --config webpack/demo.conf.js --progress --colors",
     "build-dist-js-min": "webpack --config webpack/dist-min.conf.js --progress --colors",
     "build-dist-js": "webpack --config webpack/dist.conf.js --progress --colors",
     "build-dist-css-min": "lessc --clean-css less/standart.less dist/react-metismenu-standart.min.css",
     "build-dist-css": "lessc less/standart.less dist/react-metismenu-standart.css",
-    "build-lib": "rm -rf lib && babel src -d lib",
-    "build-dist": "rm -rf dist && npm run build-dist-js && npm run build-dist-js-min && npm run build-dist-css && npm run build-dist-css-min",
-    "build": "npm run build-lib && npm run build-dist",
+    "build-lib": "rm -rf lib & babel src -d lib",
+    "build-dist": "rm -rf dist & npm run build-dist-js & npm run build-dist-js-min & npm run build-dist-css & npm run build-dist-css-min",
+    "build": "npm run build-lib & npm run build-dist",
     "lint-confs": "eslint webpack __tests__ --ext=jsx --ext=js",
     "lint-src": "eslint src --ext=jsx --ext=js",
     "lint-dev": "eslint dev --ext=jsx --ext=js",
     "unit-test": "jest",
     "coverage": "jest --coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "_test": "npm run lint-confs && npm run lint-src && npm run coverage",
-    "test": "npm run lint-src && npm run coverage"
+    "_test": "npm run lint-confs & npm run lint-src & npm run coverage",
+    "test": "npm run lint-src & npm run coverage"
   },
   "jest": {
     "testRegex": "/__tests__/.*\\.jsx?$",
@@ -70,16 +70,18 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "less-plugin-clean-css": "^1.5.1",
-    "react": "^15.3.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
     "react-addons-test-utils": "^15.3.1",
-    "react-dom": "^15.3.1",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "^15.3.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": "^0.14 || ^15.0.0-rc || ^15.0"
+    "react": "^0.14 || ^15.0.0-rc || ^15.0",
+    "prop-types": "^15.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

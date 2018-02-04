@@ -4,7 +4,8 @@
  * Date: 16.09.2016
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import classnames from 'classnames';
@@ -204,7 +205,7 @@ MetisMenu.childContextTypes = {
   LinkComponent: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.func,
-  ]).isRequired,
+  ]).isRequired
 };
 
 export default MetisMenu;
